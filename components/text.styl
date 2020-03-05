@@ -1,0 +1,269 @@
+/********************************************************************************
+ * Normal & Basic                                                               *
+ ********************************************************************************/
+.mdui-text {
+  // Adjustable
+  width $text__width
+  font-family $text__font-family
+  // Fixed
+  vertical-align top
+  height auto
+  position relative
+  display inline-block
+  box-sizing border-box
+  margin 0
+  padding 20px 0
+  -webkit-tap-highlight-color rgba(0,0,0,0)
+}
+.mdui-menu__arrow-down {
+  // Adjustable
+  font-size $text__input-font-size * 1.8
+  font-weight $text__input-font-weight
+  line-height $text__input-line-height
+  color $text__input-disabled-text-color
+  position absolute
+  transform translateY(-50%)
+  top 50%
+  right 0
+}
+.mdui-text__input {
+  // Adjustable
+  font-size $text__input-font-size
+  font-weight $text__input-font-weight
+  line-height $text__input-line-height
+  padding-top (8 - ($text__input-line-height - $text__input-font-size) * 0.5)
+  padding-bottom (9 - ($text__input-line-height - $text__input-font-size) * 0.5)
+  border-bottom-color $text__border-color
+  color $text__input-text-color
+  // Fixed
+  padding-left 0
+  padding-right 0
+  font-family inherit
+  border-bottom-style solid
+  border-bottom-width 1px
+  border-top none
+  border-left none
+  border-right none
+  position relative
+  display block
+  width 100%
+  margin 0
+  background 0
+  outline 0
+  appearance none
+  overflow hidden
+  resize none
+}
+.mdui-text__input:-webkit-autofill,
+.mdui-text__input:focus:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+}
+.mdui-text__indicator {
+  // Adjustable
+  background-color $text__indicator-color
+  // Fixed
+  width 0
+  height 2px
+  display block
+  position absolute
+  bottom 20px
+  left 50%
+  will-change: left, width, background-color
+  transition: all 0.5s $easing__out-expo
+}
+.mdui-text__label {
+  // Adjustable
+  font-size $text__input-font-size
+  line-height $text__input-font-size
+  font-weight $text__label-font-weight
+  color $text__label-text-color
+  // Fixed
+  top 20px + 8
+  position absolute
+  left 0
+  pointer-events none
+  display block
+  width 100%
+  margin 0
+  padding 0
+  overflow hidden
+  font-family inherit
+  white-space nowrap
+  text-align left
+  cursor text
+  will-change: top, font-size, color, line-height
+  transition: all 0.5s $easing__out-expo
+}
+.mdui-text__status,
+.mdui-text__counter {
+  // Adjustable
+  font-size $text__status-font-size
+  line-height $text__status-font-size
+  color $text__status-text-color
+  bottom (20 - $text__status-font-size) - 8
+  // Fixed
+  display block
+  font-family inherit
+  position absolute
+  left 0
+  will-change opacity, color
+  transition all 0.5s $easing__out-expo
+}
+.mdui-text__status--autohide,
+.mdui-text__status--counter {
+  opacity 0
+}
+.mdui-text__counter {
+  width 100%
+  text-align right
+}
+
+/* :disabled */
+.mdui-state--disabled .mdui-text__label,
+.mdui-state--disabled .mdui-text__status,
+.mdui-state--disabled .mdui-text__counter {
+  // Adjustable
+  color $text__label-disabled-text-color
+}
+.mdui-state--disabled .mdui-text__input {
+  // Adjustable
+  color $text__input-disabled-text-color
+  // Fixed
+  border-bottom-style dotted
+}
+/* :filled */
+.mdui-state--filled .mdui-text__label {
+  display none
+}
+/* :focused */
+.mdui-state--focused .mdui-text__indicator {
+  width 100%
+  left 0
+}
+.mdui-state--focused .mdui-text__status--autohide {
+  opacity 1
+}
+.mdui-state--focused .mdui-text__counter--autohide {
+   opacity 1
+ }
+/* :error */
+.mdui-state--error .mdui-text__input {
+  // Adjustable
+  border-bottom-color $text__error-color
+}
+.mdui-state--error .mdui-text__indicator {
+  // Adjustable
+  background-color $text__error-color
+}
+.mdui-state--error .mdui-text__label,
+.mdui-state--error .mdui-text__status,
+.mdui-state--error .mdui-text__counter {
+  // Adjustable
+  color $text__error-color
+}
+
+/**
+ * Dark
+ */
+.dark .mdui-text__input {
+  // Adjustable
+  color $text__input-text-color--dark
+  border-bottom-color $text__border-color--dark
+}
+.dark .mdui-menu__arrow-down {
+  // Adjustable
+  color $text__input-disabled-text-color--dark
+}
+.dark .mdui-text__indicator {
+  // Adjustable
+  background-color $text__indicator-color--dark
+}
+.dark .mdui-text__label {
+  // Adjustable
+  color $text__label-text-color--dark
+}
+.dark .mdui-text__status,
+.dark .mdui-text__counter {
+  // Adjustable
+  color $text__status-text-color--dark
+}
+/* :disabled */
+.dark.mdui-state--disabled .mdui-text__label,
+.dark.mdui-state--disabled .mdui-text__status,
+.dark.mdui-state--disabled .mdui-text__counter {
+  // Adjustable
+  color $text__label-disabled-text-color--dark
+}
+.dark.mdui-state--disabled .mdui-text__input {
+  // Adjustable
+  color $text__input-disabled-text-color--dark
+}
+/* :error */
+.dark.mdui-state--error .mdui-text__input {
+  // Adjustable
+  border-bottom-color $text__error-color
+}
+.dark.mdui-state--error .mdui-text__indicator {
+  // Adjustable
+  background-color $text__error-color
+}
+.dark.mdui-state--error .mdui-text__label,
+.dark.mdui-state--error .mdui-text__status,
+.dark.mdui-state--error .mdui-text__counter {
+  // Adjustable
+  color $text__error-color
+}
+
+
+
+/********************************************************************************
+ * Float                                                                        *
+ ********************************************************************************/
+
+/* :filled */
+.mdui-state--filled .mdui-text__label--float {
+  // Adjustable
+  font-size $text__label-font-size
+  line-height $text__label-font-size
+  top 20 - $text__label-font-size
+  // Fixed
+  cursor default
+  display block
+}
+/* :focused */
+.mdui-state--focused .mdui-text__label--float {
+  // Adjustable
+  font-size $text__label-font-size
+  line-height $text__label-font-size
+  top 20 - $text__label-font-size
+  color $text__label-focused-color
+  // Fixed
+  cursor default
+  display block
+}
+/* :required */
+.mdui-state--focused .mdui-text__label--float .mdui-text__label__required {
+  // Adjustable
+  color $text__required-color
+}
+/* Error & Focused */
+.mdui-state--error.mdui-state--focused .mdui-text__label--float {
+  // Adjustable
+  color $text__error-color
+}
+
+
+/**
+ * Dark
+ */
+/* :focused */
+.dark.mdui-state--focused .mdui-text__label--float {
+  // Adjustable
+  color $text__label-focused-color--dark
+}
+/* Error & Focused */
+.dark.mdui-state--error.mdui-state--focused .mdui-text__label--float {
+  // Adjustable
+  color $text__error-color
+}
+

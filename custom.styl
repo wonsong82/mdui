@@ -1,0 +1,162 @@
+@require '../../../common/variables'
+
+/********************************************************************************
+ * HOW TO USE:
+ * Uncomment any settings you would like to change, and change the value
+ ********************************************************************************/
+
+
+
+$global__font-family                        = 'Noto Sans KR', 'Roboto', 'Helvetica', 'Arial', sans-serif
+
+$global__primary-color                      = $color--primary
+$global__accent-color                       = #fde704
+$global__error-color                        = $color--error
+
+$global__text-color                         = rgba(0,0,0,.87)
+$global__text-color--dark                   = rgba(255,255,255,1)
+$global__secondary-text-color               = rgba(0,0,0,.54)
+$global__secondary-text-color--dark         = rgba(255,255,255,.7)
+$global__hint-disabled-text-color           = rgba(0,0,0,.38)
+$global__hint-disabled-text-color--dark     = rgba(255,255,255,.3)
+$global__divider-color                      = rgba(0,0,0,.12)
+$global__divider-color--dark                = rgba(255,255,255,.12)
+
+$global__icon-color                         = rgba(0,0,0,.54)
+$global__icon-color--dark                   = rgba(255,255,255,1)
+$global__disabled-icon-color                = rgba(0,0,0,.26)
+$global__disabled-icon-color--dark          = rgba(255,255,255,.3)
+
+
+
+/********************************************************************************
+ * Radio                                                                        *
+ ********************************************************************************/
+$radio__container-size                      = 48px
+$radio__radio-size                          = 18px
+$radio__icon-font-size                      = 22px // this is actual 18px in size
+
+$radio__off-color                           = $global__icon-color
+$radio__on-color                            = $global__primary-color
+$radio__disabled-color                      = $global__disabled-icon-color
+
+$radio__off-color--dark                     = $global__icon-color--dark
+$radio__on-color--dark                      = $global__accent-color
+$radio__disabled-color--dark                = $global__disabled-icon-color--dark
+
+
+/********************************************************************************
+ * Checkbox                                                                     *
+ ********************************************************************************/
+$checkbox__container-size                   = 48px
+$checkbox__checkbox-size                    = 18px
+$checkbox__icon-font-size                   = 24px // this is actual 18px in size
+
+$checkbox__off-color                        = $global__icon-color
+$checkbox__on-color                         = $global__primary-color
+$checkbox__disabled-color                   = $global__disabled-icon-color
+
+$checkbox__off-color--dark                  = $global__icon-color--dark
+$checkbox__on-color--dark                   = $global__accent-color
+$checkbox__disabled-color--dark             = $global__disabled-icon-color--dark
+
+
+/********************************************************************************
+ * Button                                                                       *
+ ********************************************************************************/
+$button__min-width                          = 64px
+$button__height                             = 38px
+
+$fa-button__size                            = 56px
+$fa-button__icon-size                       = 24px
+
+$icon-button__size                          = 32px
+$icon-button__icon-size                     = 24px
+
+$button__font-family                        = $global__font-family
+$button__font-weight                        = 500
+$button__font-size                          = 14px
+
+$button__text-color                         = $global__text-color
+$button__background-color                   = $global__primary-color
+$button__disabled-text-color                = $global__disabled-icon-color
+$button__disabled-background-color          = $global__divider-color
+
+$button__text-color--dark                   = $global__text-color--dark
+$button__background-color--dark             = $global__accent-color
+$button__disabled-text-color--dark          = $global__disabled-icon-color--dark
+$button__disabled-background-color--dark    = $global__divider-color--dark
+
+
+/********************************************************************************
+ * Text                                                                         *
+ ********************************************************************************/
+$text__width                                = 200px
+$text__font-family                          = $global__font-family
+$text__error-color                          = $global__error-color
+$text__required-color                       = $global__error-color
+$text__border-color                         = $global__divider-color
+
+$text__label-font-size                      = 11px
+$text__label-font-weight                    = 400
+$text__label-text-color                     = $global__hint-disabled-text-color
+$text__label-disabled-text-color            = $global__hint-disabled-text-color
+$text__label-focused-color                  = $global__primary-color
+
+$text__input-font-size                      = 13px
+$text__input-font-weight                    = 400
+$text__input-line-height                    = 20px
+$text__input-text-color                     = $global__text-color
+$text__input-disabled-text-color            = $global__hint-disabled-text-color
+
+$text__indicator-color                      = $global__primary-color
+
+$text__status-font-size                     = 11px
+$text__status-font-weight                   = 400
+$text__status-text-color                    = $global__hint-disabled-text-color
+
+$text__border-color--dark                   = $global__divider-color--dark
+$text__label-text-color--dark               = $global__hint-disabled-text-color--dark
+$text__label-disabled-text-color--dark      = $global__hint-disabled-text-color--dark
+$text__label-focused-color--dark            = $global__accent-color
+$text__input-text-color--dark               = $global__text-color--dark
+$text__input-disabled-text-color--dark      = $global__hint-disabled-text-color--dark
+$text__indicator-color--dark                = $global__accent-color
+$text__status-text-color--dark              = $global__hint-disabled-text-color--dark
+
+
+
+/********************************************************************************
+ * Menu                                                                         *
+ ********************************************************************************/
+$menu__font-family                          = $text__font-family
+$menu__height                               = 48px
+
+$menu__font-size                            = $text__input-font-size
+$menu__font-weight                          = $text__input-font-weight
+$menu__text-color                           = $text__input-text-color
+$menu__disabled-text-color                  = $text__input-disabled-text-color
+
+$menu__background-color                     = #fff
+$menu__divider-color                        = $global__divider-color
+
+$menu__spacing                              = 8px
+
+$menu__item-padding-left                    = 16px
+$menu__item-padding-right                   = 26px
+
+
+
+/********************************************************************************
+ * Scroll                                                                       *
+ ********************************************************************************/
+$scroll__track-color = rgba(0,0,0,0)
+$scroll__track-color--dark = rgba(255,255,255,0)
+$scroll__track-size = 6px
+$scroll__track-offset = 0px
+
+$scroll__handle-color = rgba(0,0,0,.25)
+$scroll__handle-color--dark = rgba(255,255,255,.25)
+$scroll__handle-size = 6px
+
+

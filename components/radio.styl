@@ -1,0 +1,143 @@
+.mdui-radio {
+  // Adjustables
+  width $radio__container-size
+  height $radio__container-size
+  line-height $radio__container-size
+  color $radio__off-color // need this for dynamic effects
+  vertical-align middle
+  margin 0
+  // Fixed
+  border-radius 50%
+  display inline-block
+  position relative
+  padding 0
+  box-sizing border-box
+  overflow hidden
+  outline none
+  user-select none
+  -webkit-tap-highlight-color rgba(0,0,0,0)
+  z-index 1
+}
+.mdui-radio__input {
+  position absolute
+  top -10px
+  left 0
+  appearance none
+  border none
+  width 0
+  height 0
+  opacity 0
+}
+.mdui-radio__box {
+  // Adjustable
+  width $radio__radio-size
+  height $radio__radio-size
+  margin ($radio__container-size - $radio__radio-size) * 0.5
+  // Fixed
+  display block
+  box-sizing border-box
+  cursor pointer
+  position relative
+}
+.mdui-radio__box__bg,
+.mdui-radio__box__radio {
+  display block
+  box-sizing border-box
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  pointer-events none
+}
+.mdui-radio__box__bg__text,
+.mdui-radio__box__radio__text {
+  // Adjustable
+  top ($radio__icon-font-size - $radio__radio-size) * -0.5
+  left ($radio__icon-font-size - $radio__radio-size) * -0.5
+  font-size $radio__icon-font-size
+  width $radio__icon-font-size
+  height $radio__icon-font-size
+  // Fixed
+  display block
+  position relative
+}
+.mdui-radio__box__bg__text {
+  // Adjustable
+  color $radio__off-color
+  // Fixed
+  will-change color
+  transition all 0.5s $easing__in-out-quad
+  z-index 1 // Chrome has a optimization bug with border-raius when transition
+}
+.mdui-radio__box__radio {
+  position absolute
+  top 0
+  left 0
+}
+.mdui-radio__box__radio__text {
+  // Adjustable
+  color $radio__on-color
+  // Fixed
+  transform scale(0)
+  opacity 0
+  will-change transform, opacity
+  transition all 0.3s $easing__in-out-quad
+  z-index 1 // Chrome has a optimization bug with border-raius when transition
+}
+
+
+// Checked
+.mdui-state--checked.mdui-radio,
+.mdui-state--checked .mdui-radio__box__bg__text {
+  // Adjustable
+  color $radio__on-color
+}
+.mdui-state--checked .mdui-radio__box__bg {
+  opacity 0
+}
+.mdui-state--checked .mdui-radio__box__radio__text {
+  opacity 1
+  transform scale(1)
+}
+
+// Disabled
+.mdui-state--disabled .mdui-radio__box {
+  cursor default
+}
+.mdui-state--disabled .mdui-radio__box__bg__text,
+.mdui-state--disabled .mdui-radio__box__radio__text {
+  // Adjustable
+  color $radio__disabled-color
+}
+
+
+
+
+/**
+ * Dark Theme
+ */
+
+.dark.mdui-radio,
+.dark .mdui-radio__box__bg__text {
+  // Adjustable
+  color $radio__off-color--dark
+}
+
+// Checked
+.dark.mdui-state--checked.mdui-radio,
+.dark.mdui-state--checked .mdui-radio__box__radio__text {
+  // Adjustable
+  color $radio__on-color--dark
+}
+
+
+// Disabled
+.dark.mdui-state--disabled .mdui-radio__box__bg__text,
+.dark.mdui-state--disabled .mdui-radio__box__radio__text {
+  // Adjustable
+  color $radio__disabled-color--dark
+}
+
+
+

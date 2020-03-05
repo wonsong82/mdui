@@ -1,0 +1,378 @@
+/********************************************************************************
+ * HOW TO USE:
+ * Besides using custom.styl (using gulp) to embed the custom style into mdui.min.css,
+ * you can add raw custom css values for any customizable fields listed below.
+ * just copy the selectors (I would recommend to copy all), and uncomment properties
+ * and change the values
+ ********************************************************************************/
+
+
+/*********************************************************
+ * Radio Button                                          *
+ *********************************************************/
+
+.mdui-radio {
+    /*width $radio__container-size*/
+    /*height $radio__container-size*/
+    /*line-height $radio__container-size*/
+    /*color $radio__off-color // need this for dynamic effects*/
+    /*vertical-align middle*/
+    /*margin 0*/
+}
+.mdui-radio__box {
+    /*width $radio__radio-size*/
+    /*height $radio__radio-size*/
+    /*margin ($radio__container-size - $radio__radio-size) * 0.5*/
+}
+.mdui-radio__box__bg__text,
+.mdui-radio__box__radio__text {
+    /*top ($radio__icon-font-size - $radio__radio-size) * -0.5*/
+    /*left ($radio__icon-font-size - $radio__radio-size) * -0.5*/
+    /*font-size $radio__icon-font-size*/
+    /*width $radio__icon-font-size*/
+    /*height $radio__icon-font-size*/
+}
+.mdui-radio__box__bg__text {
+    /*color $radio__off-color*/
+}
+.mdui-radio__box__radio__text {
+    /*color $radio__on-color*/
+}
+/* Checked */
+.mdui-state--checked.mdui-radio,
+.mdui-state--checked .mdui-radio__box__bg__text {
+    /*color $radio__on-color*/
+}
+/* Disabled */
+.mdui-state--disabled .mdui-radio__box__bg__text,
+.mdui-state--disabled .mdui-radio__box__radio__text {
+    /*color $radio__disabled-color*/
+}
+
+/**
+ * Dark Theme
+ */
+.dark.mdui-radio,
+.dark .mdui-radio__box__bg__text {
+    /*color $radio__off-color--dark*/
+}
+/* Checked */
+.dark.mdui-state--checked.mdui-radio,
+.dark.mdui-state--checked .mdui-radio__box__radio__text {
+    /*color $radio__on-color--dark*/
+}
+/* Disabled */
+.dark.mdui-state--disabled .mdui-radio__box__bg__text,
+.dark.mdui-state--disabled .mdui-radio__box__radio__text {
+    /*color $radio__disabled-color--dark*/
+}
+
+
+
+
+/*********************************************************
+ * Checkbox                                              *
+ *********************************************************/
+
+.mdui-checkbox {
+    /*width $checkbox__container-size*/
+    /*height $checkbox__container-size*/
+    /*line-height $checkbox__container-size*/
+    /*color $checkbox__off-color*/
+    /*vertical-align middle*/
+    /*margin: 0*/
+}
+.mdui-checkbox__box {
+    /*width $checkbox__checkbox-size*/
+    /*height $checkbox__checkbox-size*/
+    /*margin ($checkbox__container-size - $checkbox__checkbox-size) * 0.5*/
+}
+.mdui-checkbox__box__bg__text,
+.mdui-checkbox__box__check__text {
+    /*top ($checkbox__icon-font-size - $checkbox__checkbox-size) * -0.5*/
+    /*left ($checkbox__icon-font-size - $checkbox__checkbox-size) * -0.5*/
+    /*font-size $checkbox__icon-font-size // actual 18px size*/
+    /*width $checkbox__icon-font-size*/
+    /*height $checkbox__icon-font-size*/
+}
+.mdui-checkbox__box__bg__text {
+    /*color $checkbox__off-color*/
+}
+.mdui-checkbox__box__check__text {
+    /*color $checkbox__on-color*/
+}
+/* Checked */
+.mdui-state--checked.mdui-checkbox,
+.mdui-state--checked .mdui-checkbox__box__bg__text {
+    /*color $checkbox__on-color*/
+}
+/* Disabled */
+.mdui-state--disabled .mdui-checkbox__box__bg__text,
+.mdui-state--disabled .mdui-checkbox__box__check__text {
+    /*color $checkbox__disabled-color*/
+}
+
+/**
+ * Dark Theme
+ */
+.dark.mdui-checkbox,
+.dark .mdui-checkbox__box__bg__text {
+    /*color $checkbox__off-color--dark*/
+}
+/* Checked */
+.dark.mdui-state--checked.mdui-checkbox,
+.dark.mdui-state--checked .mdui-checkbox__box__check__text {
+    /*color $checkbox__on-color--dark*/
+}
+/* Disabled */
+.dark.mdui-state--disabled .mdui-checkbox__box__bg__text,
+.dark.mdui-state--disabled .mdui-checkbox__box__check__text {
+    /*color $checkbox__disabled-color--dark*/
+}
+
+
+
+
+
+/*********************************************************
+ * Button                                                *
+ *********************************************************/
+
+/* Regular Button */
+.mdui-button {
+    /*min-width $button__min-width*/
+    /*height $button__height*/
+    /*line-height $button__height*/
+    /*color $button__text-color*/
+    /*background-color $button__background-color*/
+    /*font-family $button__font-family*/
+    /*font-weight $button__font-weight*/
+    /*font-size $button__font-size*/
+}
+.mdui-button__text {
+    /*top 1px*/
+}
+.mdui-button .material-icons {
+    /*top -1px*/
+}
+
+/* :disabled */
+.mdui-state--disabled.mdui-button {
+    /*color $button__disabled-text-color*/
+    /*background-color $button__disabled-background-color*/
+}
+
+
+
+/* Flat Button */
+.mdui-button--flat {
+    /*color $button__background-color*/
+}
+.mdui-button--flat--dark {
+    /*color $button__background-color--dark*/
+}
+
+
+/* Floating Action Button */
+.mdui-button--fa {
+    /*width $fa-button__size*/
+    /*height $fa-button__size*/
+    /*font-size $fa-button__icon-size*/
+}
+.mdui-button--fa .material-icons {
+    /*width $fa-button__icon-size*/
+    /*line-height $fa-button__icon-size*/
+    /*transform translate($fa-button__icon-size * -0.5, $fa-button__icon-size * -0.5)*/
+}
+
+
+/* Icon Button */
+.mdui-button--icon {
+    /*width $icon-button__size*/
+    /*height $icon-button__size*/
+    /*font-size $icon-button__icon-size*/
+    /*color $button__background-color*/
+    /*background-color transparent*/
+}
+.mdui-button--icon .material-icons {
+    /*color $button__background-color*/
+    /*width $icon-button__icon-size*/
+    /*line-height $icon-button__icon-size*/
+    /*transform translate($icon-button__icon-size * -0.5, $icon-button__icon-size * -0.5)*/
+}
+
+/* :disabled */
+.mdui-state--disabled.mdui-button--icon {
+    /*background-color transparent*/
+}
+.mdui-state--disabled .material-icons {
+    /*color $button__disabled-text-color*/
+}
+
+
+
+/**
+ * Dark Theme
+ */
+
+/* Regular Button */
+.dark.mdui-button {
+    /*color $button__text-color--dark*/
+    /*background-color $button__background-color--dark*/
+}
+
+/* :disabled */
+.dark.mdui-state--disabled.mdui-button {
+    /*color $button__disabled-text-color--dark*/
+    /*background-color $button__disabled-background-color--dark*/
+}
+
+/* Icon Button */
+.dark.mdui-button--icon {
+    /*color $button__background-color--dark*/
+    /*background-color transparent*/
+}
+.dark.mdui-button--icon .material-icons {
+    /*color $button__background-color--dark*/
+}
+
+/* :disabled */
+.dark.mdui-state--disabled.mdui-button--icon {
+    /*background-color transparent*/
+}
+.dark.mdui-state--disabled .material-icons {
+    /*color $button__disabled-text-color--dark*/
+}
+
+
+
+
+/*********************************************************
+ * Text                                                  *
+ *********************************************************/
+.mdui-text {
+    /*width $text__width*/
+    /*font-family $text__font-family*/
+}
+.mdui-text__input {
+    /*font-size $text__input-font-size*/
+    /*font-weight $text__input-font-weight*/
+    /*line-height $text__input-line-height*/
+    /*padding-top (8 - ($text__input-line-height - $text__input-font-size) * 0.5)*/
+    /*padding-bottom (9 - ($text__input-line-height - $text__input-font-size) * 0.5)*/
+    /*border-bottom-color $text__border-color*/
+    /*color $text__input-text-color*/
+}
+.mdui-text__indicator {
+    /*background-color $text__indicator-color*/
+}
+.mdui-text__label {
+    /*font-size $text__input-font-size*/
+    /*line-height $text__input-font-size*/
+    /*font-weight $text__label-font-weight*/
+    /*color $text__label-text-color*/
+}
+.mdui-text__status,
+.mdui-text__counter {
+    /*font-size $text__status-font-size*/
+    /*line-height $text__status-font-size*/
+    /*color $text__status-text-color*/
+    /*bottom (20 - $text__status-font-size) - 8*/
+}
+/* :disabled */
+.mdui-state--disabled .mdui-text__label,
+.mdui-state--disabled .mdui-text__status,
+.mdui-state--disabled .mdui-text__counter {
+    /*color $text__label-disabled-text-color*/
+}
+.mdui-state--disabled .mdui-text__input {
+    /*color $text__input-disabled-text-color*/
+}
+/* :error */
+.mdui-state--error .mdui-text__input {
+    /*border-bottom-color $text__error-color*/
+}
+.mdui-state--error .mdui-text__indicator {
+    /*background-color $text__error-color*/
+}
+.mdui-state--error .mdui-text__label,
+.mdui-state--error .mdui-text__status,
+.mdui-state--error .mdui-text__counter {
+    /*color $text__error-color*/
+}
+
+/** Float **/
+
+/* :filled */
+.mdui-state--filled .mdui-text__label--float {
+    /*font-size $text__label-font-size*/
+    /*line-height $text__label-font-size*/
+    /*top 20 - $text__label-font-size*/
+}
+/* :focused */
+.mdui-state--focused .mdui-text__label--float {
+    /*font-size $text__label-font-size*/
+    /*line-height $text__label-font-size*/
+    /*top 20 - $text__label-font-size*/
+    /*color $text__label-focused-color*/
+}
+/* :required */
+.mdui-state--focused .mdui-text__label--float .mdui-text__label__required {
+    /*color $text__required-color*/
+}
+/* Error & Focused */
+.mdui-state--error.mdui-state--focused .mdui-text__label--float {
+    /*color $text__error-color*/
+}
+
+/**
+ * Dark
+ */
+.dark .mdui-text__input {
+    /*color $text__input-text-color--dark*/
+    /*border-bottom-color $text__border-color--dark*/
+}
+.dark .mdui-text__indicator {
+    /*background-color $text__indicator-color--dark*/
+}
+.dark .mdui-text__label {
+    /*color $text__label-text-color--dark*/
+}
+.dark .mdui-text__status,
+.dark .mdui-text__counter {
+    /*color $text__status-text-color--dark*/
+}
+/* :disabled */
+.dark.mdui-state--disabled .mdui-text__label,
+.dark.mdui-state--disabled .mdui-text__status,
+.dark.mdui-state--disabled .mdui-text__counter {
+    /*color $text__label-disabled-text-color--dark*/
+}
+.dark.mdui-state--disabled .mdui-text__input {
+    /*color $text__input-disabled-text-color--dark*/
+}
+/* :error */
+.dark.mdui-state--error .mdui-text__input {
+    /*border-bottom-color $text__error-color*/
+}
+.dark.mdui-state--error .mdui-text__indicator {
+    /*background-color $text__error-color*/
+}
+.dark.mdui-state--error .mdui-text__label,
+.dark.mdui-state--error .mdui-text__status,
+.dark.mdui-state--error .mdui-text__counter {
+    /*color $text__error-color*/
+}
+/* :focused */
+.dark.mdui-state--focused .mdui-text__label--float {
+    /*color $text__label-focused-color--dark*/
+}
+/* Error & Focused */
+.dark.mdui-state--error.mdui-state--focused .mdui-text__label--float {
+    /*color $text__error-color*/
+}
+
+
+
+
+

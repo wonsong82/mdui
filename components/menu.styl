@@ -1,0 +1,78 @@
+.mdui-menu {
+  // Adjustables
+  padding-top $menu__spacing
+  padding-bottom $menu__spacing
+  background $menu__background-color
+  height auto
+  // Fixed
+  border-radius 2px
+  box-shadow $shadow__dp2
+  list-style none
+  outline none
+  appearance none
+  padding-left 0
+  padding-right 0
+  box-sizing border-box
+  margin 0
+  -webkit-tap-highlight-color rgba(0,0,0,0)
+  z-index 999
+  display none
+  opacity 0
+  overflow hidden
+}
+
+
+.mdui-text--menu {
+  cursor pointer
+  user-select none
+}
+.mdui-text--menu > * {
+  pointer-events none
+}
+
+
+.mdui-menu__item {
+  // Adjustable
+  font-size $menu__font-size
+  font-family $menu__font-family
+  color $menu__text-color
+  height $menu__height
+  line-height $menu__height
+  padding-left $menu__item-padding-left
+  padding-right $menu__item-padding-right
+  // Fixed
+  width 100%
+  display block
+  overflow hidden
+  margin 0
+  padding-top 0
+  padding-bottom 0
+  cursor pointer
+  white-space nowrap
+  box-sizing border-box
+  vertical-align middle
+  outline none
+  appearance none
+  -webkit-tap-highlight-color rgba(0,0,0,0)
+  z-index 1
+}
+
+.mdui-state--disabled.mdui-menu__item {
+  // Adjustable
+  color $menu__disabled-text-color
+}
+
+.mdui-menu__divider {
+  // Adjustable
+  background-color $menu__divider-color
+  margin $menu__spacing 0
+  // Fixed
+  height 1px
+  line-height 1px
+  display block
+  width 100%
+  padding 0
+  -webkit-tap-highlight-color rgba(0,0,0,0)
+  z-index 1
+}
+
